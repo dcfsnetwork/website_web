@@ -1,0 +1,12 @@
+@import '@mixin';
+
+.table {
+  max-width: 1050px;
+  > :nth-child(1) {
+    text-align: center;
+    margin: 0 auto 80px;
+    @include phone {
+      margin: 0 auto 40px;
+    }
+  }
+}

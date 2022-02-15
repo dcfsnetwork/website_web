@@ -1,0 +1,85 @@
+@import '@mixin';
+
+.content-wrap {
+  @include phone {
+    padding: 0 20px;
+  }
+}
+
+.news-wrap {
+  @include flex(flex-start, flex-start, row, wrap);
+  margin-top: 60px;
+  @include phone {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .news-card {
+    @include w-h(calc(50% - 12px), 260px);
+    @include flex;
+    @include phone {
+      @include w-h(100%, 160px);
+      padding: 15px;
+    }
+    margin: 0 24px 40px 0;
+    padding: 40px;
+    border-radius: 12px;
+    background: #fff;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 1px 2px -2px #00000029, 0 3px 6px #00000008, 0 5px 12px 4px #00000008;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    img {
+      @include w-h(40%);
+      margin-right: 20px;
+      object-fit: cover;
+      border-radius: 12px;
+      @include phone {
+        width: 45%;
+        margin-right: 10px;
+      }
+    }
+    > div {
+      @include flex(space-between, flex-start, column);
+      flex: 1;
+      height: 100%;
+      padding: 10px 0;
+      .news-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0e0e0e;
+        line-height: 36px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        word-break: break-word;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        /*! autoprefixer: off */
+        -webkit-box-orient: vertical;
+        @include phone {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+      .news-time {
+        font-size: 16px;
+        color: #2e2e2e;
+        line-height: 22px;
+        word-break: break-word;
+        @include phone {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .pagination-wrap {
+    @include flex(flex-end);
+    width: 100%;
+    margin-top: 30px;
+  }
+}

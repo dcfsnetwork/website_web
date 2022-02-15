@@ -1,0 +1,22 @@
+@import '@mixin';
+
+.illustration-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  @include phone {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 40px;
+  }
+}
+
+.content-width {
+  max-width: 1000px;
+  word-wrap: break-word;
+  @include phone {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+@import '@mixin';
+
+.slash-wrap {
+  @include flex(flex-start, flex-start);
+  position: relative;
+  margin-bottom: 10px;
+  > img {
+    width: 24px;
+    position: absolute;
+    top: 18px;
+    left: -35px;
+  }
+  @include phone {
+    padding-left: 23px;
+    > img {
+      width: 13px;
+      top: 10px;
+      left: 0;
+    }
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  margin: 26px 0 0 6px;
+  @include phone {
+    font-size: 12px;
+    margin: 16px 0 0 6px;
+  }
+}

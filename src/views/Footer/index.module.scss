@@ -1,0 +1,93 @@
+@import '@mixin';
+
+.footer-wrap-g,
+.footer-wrap-w {
+  @include w-h(100%, $FOOTER_H);
+  @include flex(center, center, column);
+  color: $TEXT_C;
+  > div:nth-child(2) {
+    font-size: 34px;
+    line-height: 50px;
+    margin: 10px 0 50px;
+    @include phone {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+}
+.footer-wrap-g {
+  background: url('../../assets/imgs/footer_bg.png') center / cover no-repeat;
+  @include phone {
+    background: url('../../assets/imgs/footer_bg_m.png') center / cover no-repeat;
+    background-size: 100% 100%;
+  }
+}
+.footer-wrap-w {
+  background: url('../../assets/imgs/footer_bg_w.png') center / cover no-repeat;
+  background-color: #f9fafb;
+  @include phone {
+    background: url('../../assets/imgs/footer_bg_w_m.png') center / cover no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.input-wrap {
+  @include flex;
+  margin-bottom: 40px;
+  @include phone {
+    flex-direction: column;
+    > input {
+      &:first-child {
+        margin: 0 0 20px !important;
+      }
+    }
+  }
+  > input {
+    @include w-h(300px, 48px);
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+}
+.subscribe-btn {
+  @include w-h(180px, 48px);
+  @include flex;
+  color: $PRIMARY_C;
+  font-size: 20px;
+  background: $TEXT_C;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.share-wrap {
+  @include flex;
+  margin-top: 20px;
+  @include phone {
+    width: 100%;
+    padding: 0 8%;
+    justify-content: space-between;
+    > a {
+      margin-right: 0 !important;
+    }
+  }
+  > a {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      width: 41px;
+      transition: 0.2s all ease-in-out;
+      @include phone {
+        width: 30px;
+      }
+    }
+    &:hover img {
+      opacity: 0.8;
+    }
+  }
+}

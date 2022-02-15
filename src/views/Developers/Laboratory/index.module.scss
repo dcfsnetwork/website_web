@@ -1,0 +1,26 @@
+@import '@mixin';
+
+.laboratory {
+  > :first-child {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  > :nth-child(3) {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    height: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #2e2e2e;
+    line-height: 36px;
+    margin-top: 80px;
+    padding-bottom: 40px;
+    border-bottom: $PRIMARY_C 2px solid;
+    cursor: pointer;
+    @include phone {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import '@mixin';
+
+.bg1 {
+  position: absolute;
+  left: 7%;
+  top: 50px;
+  width: 15%;
+  @include phone {
+    width: 50%;
+    top: 10px;
+  }
+}
+.bg2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  @include phone {
+    display: none;
+  }
+}
+
+.content-wrap {
+  @include flex(space-between, flex-start);
+  @include phone {
+    display: block;
+  }
+  .title-wrap {
+    width: 40%;
+    position: relative;
+    @include phone {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    > div {
+      color: #0e0e0e;
+      &:first-child {
+        font-size: 52px;
+        font-weight: bold;
+        line-height: 58px;
+        @include phone {
+          font-size: 28px;
+          line-height: 46px;
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        font-size: 24px;
+        color: #34343d;
+        @include phone {
+          font-size: 22px;
+        }
+      }
+      &:nth-child(2) {
+        margin: 25px 0;
+        @include phone {
+          margin: 20px 0;
+        }
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
+        font-size: 16px;
+        color: #747484;
+        line-height: 20px;
+      }
+      &:nth-child(4) {
+        margin: 30px 0 20px;
+        @include phone {
+          margin: 25px 0 15px;
+        }
+      }
+    }
+  }
+  .form-wrap {
+    width: 48%;
+    @include phone {
+      width: 100%;
+    }
+    :global {
+      input,
+      textarea {
+        border-color: #e9ebf7;
+        &:focus,
+        &:hover {
+          border-color: $PRIMARY_C;
+        }
+      }
+    }
+  }
+}

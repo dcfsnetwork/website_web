@@ -1,0 +1,52 @@
+@import '@mixin';
+
+.title {
+  @include flex(center, flex-start);
+  font-size: 80px;
+  font-weight: bolder;
+  color: $TEXT_C;
+  line-height: 68px;
+  @include phone {
+    font-size: 60px;
+    line-height: 48px;
+  }
+  span {
+    margin: 0 20px;
+  }
+}
+
+.subtitle {
+  width: 1000px;
+  font-size: 48px;
+  font-weight: bold;
+  color: $TEXT_C;
+  line-height: 68px;
+  text-align: center;
+  margin: 40px auto;
+  @include phone {
+    width: 100%;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 30px auto;
+  }
+}
+
+.sub-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: $PRIMARY_C;
+  line-height: 32px;
+  text-align: center;
+  @include phone {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.start-btn {
+  text-align: center;
+  margin-top: 60px;
+  @include phone {
+    margin-top: 40px;
+  }
+}

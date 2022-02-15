@@ -1,0 +1,76 @@
+@import '@mixin';
+
+.item {
+  width: 42%;
+  height: 140px;
+  text-align: center;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px dashed $PRIMARY_C;
+  padding: 0 30px 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @include phone {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  > :first-child {
+    color: $PRIMARY_C;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  @include phone {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+
+.single {
+  background-color: #f9fafb;
+  > :first-child {
+    margin: auto;
+  }
+}
+
+.line {
+  width: 16%;
+  height: 1px;
+  border-top: 1px dashed $PRIMARY_C;
+  @include phone {
+    border: none;
+    width: 100%;
+  }
+  > :first-child {
+    @include phone {
+      display: none;
+    }
+    width: 1em;
+    height: 1em;
+    background: white;
+    border-radius: 55px;
+    border: 3px solid $PRIMARY_C;
+    margin: auto;
+    position: relative;
+    top: -0.5em;
+  }
+  > :last-child {
+    width: 2px;
+    height: 213px;
+    background-color: $PRIMARY_C;
+    margin: auto;
+    position: relative;
+    top: -0.5em;
+    @include phone {
+      top: -40px;
+    }
+  }
+}

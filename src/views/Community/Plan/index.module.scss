@@ -1,0 +1,32 @@
+@import '@mixin';
+
+.plan {
+  > :nth-child(2),
+  > :nth-child(3) {
+    > div {
+      margin-top: 40px;
+      @include phone {
+        margin-top: 30px;
+      }
+      > :first-child {
+        font-size: 32px;
+        font-weight: bold;
+        @include phone {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    > :first-child {
+      color: $PRIMARY_C;
+      font-size: 40px;
+      font-weight: bold;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      @include phone {
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

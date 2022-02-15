@@ -1,0 +1,120 @@
+@import '@mixin';
+
+.part_one {
+  overflow: hidden;
+  > :first-child {
+    width: 480px;
+    height: 480px;
+    background: white;
+    border-radius: 50%;
+    border: 140px solid #f2b14a;
+    position: absolute;
+    left: -240px;
+    top: -70px;
+    @include phone {
+      width: 350px;
+      height: 350px;
+      border: 100px solid #f2b14a;
+      left: -180px;
+      top: -100px;
+    }
+  }
+  > :nth-child(2) {
+    > div {
+      width: 400px;
+      height: 400px;
+      background: white;
+      border-radius: 50%;
+      border: 130px solid #1941e3;
+      position: absolute;
+      right: 0px;
+      bottom: -160px;
+      @include phone {
+        width: 300px;
+        height: 300px;
+        border: 70px solid #1941e3;
+        right: 0px;
+        bottom: -160px;
+      }
+    }
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: -160px;
+    bottom: 0;
+  }
+  > :nth-child(3) {
+    min-height: 270px;
+    > :first-child,
+    > :nth-child(2) {
+      position: relative;
+      @include phone {
+        left: 0;
+      }
+    }
+    > :nth-child(2) {
+      padding-right: 35px;
+      font-weight: 500;
+      margin-top: 36px;
+    }
+  }
+}
+
+.part_two {
+  overflow: hidden;
+  > :nth-child(2) {
+    width: 100%;
+    @include phone {
+      overflow-x: auto;
+    }
+  }
+  .table {
+    margin-top: 40px;
+    @include phone {
+      width: 1000px;
+    }
+    > :first-child {
+      border-radius: 10px 10px 0 0;
+      background-color: #e9ebf7;
+      font-weight: bold;
+      font-size: 20px;
+      color: black !important;
+    }
+    > :last-child {
+      border-bottom: 1px solid #daddeb;
+      border-radius: 0 0 10px 10px;
+    }
+    > div {
+      color: #747484;
+      display: flex;
+      height: 80px;
+      line-height: 80px;
+      border-top: 1px solid #daddeb;
+      border-left: 1px solid #daddeb;
+      border-right: 1px solid #daddeb;
+      @include phone {
+        height: 55px;
+        line-height: 55px;
+      }
+
+      > div {
+        padding-left: 35px;
+        font-size: 18px;
+        @include phone {
+          font-size: 15px;
+        }
+      }
+      > :first-child {
+        width: 50%;
+        border-right: 1px solid #daddeb;
+      }
+      > :nth-child(2) {
+        border-right: 1px solid #daddeb;
+      }
+      > :nth-child(2),
+      > :nth-child(3) {
+        width: 25%;
+      }
+    }
+  }
+}
